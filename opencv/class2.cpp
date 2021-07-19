@@ -6,13 +6,13 @@ using namespace std;
 using namespace cv;
 
 void main() {
-	string path = "Resources/test2.jpg";
+	string path = "C:/Users/saura/Downloads/suman.jpeg";
 	Mat img = imread(path);
 	Mat imgGray, imgBlur, imgCanny, imgDil, imgErode;
 
 	cvtColor(img, imgGray, COLOR_BGR2GRAY);
 	GaussianBlur(img, imgBlur, Size(3,3),3,0);
-	Canny(imgBlur, imgCanny, 80, 240);
+	Canny(imgBlur, imgCanny, 65, 195);
 
 	Mat kernel = getStructuringElement(MORPH_RECT, Size(3, 3));
 
@@ -25,7 +25,7 @@ void main() {
 	imshow("image blur", imgBlur);
 	imshow("image canny", imgCanny);
 	//imshow("image dilation", imgDil);
-	//imshow("Image Erode", imgErode);
+	imshow("Image Erode", imgErode);
 	waitKey(0);
 
 }
