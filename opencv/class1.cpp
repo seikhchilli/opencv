@@ -46,7 +46,10 @@ void main() {
 int main() {
 
 	
-	VideoCapture cap(0);
+
+	string path = "C:/Users/saura/Videos/DIVINE – Chal Bombay - Official Music Video.webm";
+
+	VideoCapture cap(path);
 	// cap is the object of class video capture that tries to capture test_vide0.mp4
 	if (!cap.isOpened())  // isOpened() returns true if capturing has been initialized.
 	{
